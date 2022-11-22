@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-display: swap;
+  font-family: "roboto-bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-display: swap;
+  font-family: "roboto-regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-display: swap;
+  font-family: "roboto-medium";
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+.input_error {
+  border: 1px solid #EB5757 !important;
+}
+.input_error .mobile_background {
+  border-top: 1px solid #EB5757 !important;
+}
+body {
+  background-color: #2C2D34;
+}
+body #wrapper .form_template {
+  background-color: #1D1F2B;
+  border-radius: 20px;
+  display: flex;
+  height: 694px;
+  justify-content: space-between;
+  margin: 120px auto;
+  overflow: hidden;
+  width: 876px;
+}
+body #wrapper .form_template label {
+  color: #6D7186;
+  display: block;
+  font: 14px/16px "roboto-regular";
+  margin-top: 19px;
+}
+body #wrapper .form_template .columned_block {
+  display: flex;
+  justify-content: space-between;
+}
+body #wrapper .form_template .columned_block label {
+  width: 48.4%;
+}
+body #wrapper .form_template .form_inputs {
+  background: #31354F;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  color: #FFF;
+  display: block;
+  font: 16px/16px "roboto-regular";
+  height: 60px;
+  margin-top: 8px;
+  outline: none;
+  padding: 20px;
+  width: 100%;
+}
+body #wrapper .form_template .form_inputs:focus {
+  border: 1px solid #00A3FF;
+}
+body #wrapper .form_template .button_submit {
+  background-color: #00A3FF;
+  border-radius: 9px;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  font: 21px/25px "roboto-bold";
+  height: 60px;
+  margin-top: 30px;
+  outline: none;
+  transition: 0.21s;
+  width: 100%;
+}
+body #wrapper .form_template .button_submit:hover {
+  opacity: 0.8;
+}
+body #wrapper .form_template p {
+  color: #6D7186;
+  font: 17px/21px "roboto-regular";
+  margin: 36px 0 0;
+  text-align: center;
+}
+body #wrapper .form_template p a {
+  color: #00A3FF;
+}
+body #wrapper .form_template h1 {
+  color: #FFF;
+  font: 21px/24px "roboto-regular";
+  margin: 0 0 46px;
+  padding-left: 75px;
+  position: relative;
+}
+body #wrapper .form_template h1 span {
+  color: #6D7186;
+  display: block;
+  font: 17px/21px "roboto-regular";
+  margin-top: 3px;
+}
+body #wrapper .form_template h1::before {
+  content: "";
+  background: url("../images/the_icon_sprite.svg");
+  background-position: 133px -33px;
+  height: 46px;
+  left: 0;
+  margin-right: 29px;
+  position: absolute;
+  width: 46px;
+}
+body #wrapper .form_template div:first-child {
+  padding: 74px 78px;
+  width: 100%;
+}
+body #wrapper .form_template div:last-child {
+  background-color: #3B3C43;
+  height: 100%;
+  min-width: 205px;
+  overflow: hidden;
+  padding: 75px 0 0 51px;
+  position: relative;
+}
+body #wrapper .form_template div:last-child::before,
+body #wrapper .form_template div:last-child::after {
+  content: "";
+  position: absolute;
+}
+body #wrapper .form_template div:last-child::before {
+  background: url("../images/right_panel_sign_up_in.svg");
+  background-size: contain;
+  height: 373px;
+  left: -40px;
+  top: -51px;
+  width: 277px;
+}
+body #wrapper .form_template div:last-child:after {
+  background: url("../images/the_icon_sprite.svg");
+  background-position: -180px 0;
+  height: 110px;
+  width: 95px;
+}
+@media only screen and (max-width: 980px) {
+  body #wrapper {
+    padding: 0 40px;
+  }
+  body #wrapper .form_template {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body #wrapper .form_template {
+    width: 100%;
+  }
+  body #wrapper .form_template div:first-child {
+    padding: 35px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  body #wrapper .form_template {
+    width: 100%;
+  }
+  body #wrapper .form_template div:last-child {
+    display: none;
+  }
+}
+@media only screen and (max-width: 540px) {
+  body #wrapper {
+    padding: 0 28px;
+  }
+  body #wrapper .form_template {
+    height: 500px;
+    width: 100%;
+  }
+  body #wrapper .form_template#signup_form {
+    height: 720px;
+  }
+  body #wrapper .form_template div:first-child {
+    padding: 35px 20px;
+  }
+  body #wrapper .form_template div .columned_block {
+    flex-direction: column;
+  }
+  body #wrapper .form_template div .columned_block label {
+    width: 100%;
+  }
+}

@@ -1,0 +1,599 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-display: swap;
+  font-family: "roboto-bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-display: swap;
+  font-family: "roboto-regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-display: swap;
+  font-family: "roboto-medium";
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+.input_error {
+  border: 1px solid #EB5757 !important;
+}
+.input_error .mobile_background {
+  border-top: 1px solid #EB5757 !important;
+}
+body {
+  background-color: #2C2D34;
+}
+body #wrapper .form_template {
+  background-color: #1D1F2B;
+  border-radius: 20px;
+  display: flex;
+  height: 694px;
+  justify-content: space-between;
+  margin: 120px auto;
+  overflow: hidden;
+  width: 876px;
+}
+body #wrapper .form_template label {
+  color: #6D7186;
+  display: block;
+  font: 14px/16px "roboto-regular";
+  margin-top: 19px;
+}
+body #wrapper .form_template .columned_block {
+  display: flex;
+  justify-content: space-between;
+}
+body #wrapper .form_template .columned_block label {
+  width: 48.4%;
+}
+body #wrapper .form_template .form_inputs {
+  background: #31354F;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  color: #FFF;
+  display: block;
+  font: 16px/16px "roboto-regular";
+  height: 60px;
+  margin-top: 8px;
+  outline: none;
+  padding: 20px;
+  width: 100%;
+}
+body #wrapper .form_template .form_inputs:focus {
+  border: 1px solid #00A3FF;
+}
+body #wrapper .form_template .button_submit {
+  background-color: #00A3FF;
+  border-radius: 9px;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  font: 21px/25px "roboto-bold";
+  height: 60px;
+  margin-top: 30px;
+  outline: none;
+  transition: 0.21s;
+  width: 100%;
+}
+body #wrapper .form_template .button_submit:hover {
+  opacity: 0.8;
+}
+body #wrapper .form_template p {
+  color: #6D7186;
+  font: 17px/21px "roboto-regular";
+  margin: 36px 0 0;
+  text-align: center;
+}
+body #wrapper .form_template p a {
+  color: #00A3FF;
+}
+body #wrapper .form_template h1 {
+  color: #FFF;
+  font: 21px/24px "roboto-regular";
+  margin: 0 0 46px;
+  padding-left: 75px;
+  position: relative;
+}
+body #wrapper .form_template h1 span {
+  color: #6D7186;
+  display: block;
+  font: 17px/21px "roboto-regular";
+  margin-top: 3px;
+}
+body #wrapper .form_template h1::before {
+  content: "";
+  background: url("../images/the_icon_sprite.svg");
+  background-position: 133px -33px;
+  height: 46px;
+  left: 0;
+  margin-right: 29px;
+  position: absolute;
+  width: 46px;
+}
+body #wrapper .form_template div:first-child {
+  padding: 74px 78px;
+  width: 100%;
+}
+body #wrapper .form_template div:last-child {
+  background-color: #3B3C43;
+  height: 100%;
+  min-width: 205px;
+  overflow: hidden;
+  padding: 75px 0 0 51px;
+  position: relative;
+}
+body #wrapper .form_template div:last-child::before,
+body #wrapper .form_template div:last-child::after {
+  content: "";
+  position: absolute;
+}
+body #wrapper .form_template div:last-child::before {
+  background: url("../images/right_panel_sign_up_in.svg");
+  background-size: contain;
+  height: 373px;
+  left: -40px;
+  top: -51px;
+  width: 277px;
+}
+body #wrapper .form_template div:last-child:after {
+  background: url("../images/the_icon_sprite.svg");
+  background-position: -180px 0;
+  height: 110px;
+  width: 95px;
+}
+@media only screen and (max-width: 980px) {
+  body #wrapper {
+    padding: 0 40px;
+  }
+  body #wrapper .form_template {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body #wrapper .form_template {
+    width: 100%;
+  }
+  body #wrapper .form_template div:first-child {
+    padding: 35px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  body #wrapper .form_template {
+    width: 100%;
+  }
+  body #wrapper .form_template div:last-child {
+    display: none;
+  }
+}
+@media only screen and (max-width: 540px) {
+  body #wrapper {
+    padding: 0 28px;
+  }
+  body #wrapper .form_template {
+    height: 500px;
+    width: 100%;
+  }
+  body #wrapper .form_template#signup_form {
+    height: 720px;
+  }
+  body #wrapper .form_template div:first-child {
+    padding: 35px 20px;
+  }
+  body #wrapper .form_template div .columned_block {
+    flex-direction: column;
+  }
+  body #wrapper .form_template div .columned_block label {
+    width: 100%;
+  }
+}
+nav {
+  align-items: center;
+  background-color: #1E1F25;
+  display: flex;
+  height: 62px;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+nav > span {
+  background: url("../../assets/images/the_icon_sprite.svg");
+  background-position: 0 -42px;
+  height: 28px;
+  width: 138px;
+}
+nav ul {
+  display: flex;
+  height: 100%;
+}
+nav ul li {
+  align-items: center;
+  border-right: 1px solid #3A3C46;
+  color: #FFF;
+  display: inherit;
+  font: 14px/16px "roboto-regular";
+  list-style: none;
+  margin-right: 26px;
+  padding-right: 26px;
+}
+nav ul li:last-child {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+nav ul li a {
+  color: #FFF;
+  display: flex;
+  font: inherit;
+  text-decoration: none;
+}
+nav ul li a::before {
+  background: url("../../assets/images/the_icon_sprite.svg");
+  background-position: -425px -50px;
+  content: "";
+  height: 13px;
+  margin-right: 9px;
+  width: 13px;
+}
+@media screen and (max-width: 580px) {
+  nav {
+    padding: 0 20px;
+  }
+  nav ul li:first-child {
+    display: none;
+  }
+  nav ul li a span {
+    display: none;
+  }
+  nav ul li a::before {
+    margin-right: 0;
+  }
+}
+#wrapper #post_and_reply_container {
+  margin: 48px auto;
+  width: 978px;
+}
+#wrapper #post_and_reply_container h1 {
+  color: #FFF;
+  font: 21px/25px "roboto-regular";
+}
+#wrapper #post_and_reply_container > p {
+  color: #6D7186;
+  font: 17px/21px "roboto-regular";
+  margin: 6px auto 55px;
+}
+#wrapper #post_and_reply_container > p.recent_forums {
+  color: #FFF;
+  font: 16px/18px "roboto-regular";
+  margin: 58px 0 16px;
+}
+#wrapper #post_and_reply_container #post_list_container {
+  position: relative;
+}
+#wrapper #post_and_reply_container #post_list_container.has_comments::before {
+  display: none !important;
+}
+#wrapper #post_and_reply_container #post_list_container::before {
+  align-items: center;
+  border-radius: 9px;
+  border: 1px dashed #6D6E75;
+  color: #FFF;
+  content: "No post yet.";
+  display: flex;
+  font: 16px/19px "roboto-regular";
+  height: 89px;
+  justify-content: center;
+  left: 0;
+  margin: 33px auto 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 978px;
+}
+#wrapper #post_and_reply_container #post_list_container > li {
+  background: #1E1F25;
+  border-radius: 10px;
+  list-style: none;
+  margin-bottom: 30px;
+  padding: 22px 30px 30px;
+  position: relative;
+  z-index: 1;
+}
+#wrapper #post_and_reply_container #post_list_container > li#clone_post {
+  display: none;
+}
+#wrapper #post_and_reply_container #post_list_container > li:hover .response_container .delete_button_container {
+  opacity: 1;
+}
+#wrapper #post_and_reply_container #post_list_container > li p {
+  color: #FFF;
+  font: 16px/25px "roboto-regular";
+  margin: 0 0 0;
+}
+#wrapper #post_and_reply_container #post_list_container > li .post_reply_containers {
+  margin: 20px 0 23px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container .delete_button_container {
+  opacity: 0;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > span {
+  color: #A3A3FF;
+  display: block;
+  font: 14px/16px "roboto-regular";
+  margin-top: 10px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > span span:first-child {
+  border-right: 1px solid #A3A3FF;
+  margin-right: 15px;
+  padding-right: 24px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div {
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  transform: translateX(134px);
+  transition: 0.21s;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div.show_delete_option {
+  transform: translateX(0);
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div.show_delete_option > button.confirm_delete_button {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div > button {
+  background: url("../images/the_icon_sprite.svg");
+  background-color: #32333C;
+  border-radius: 4px;
+  border: 1px solid #606066;
+  cursor: pointer;
+  height: 29px;
+  width: 29px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div > button:hover {
+  background-color: #FFF;
+  border: 1px solid #FFF;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div > button.reply_button {
+  background-position: -358px -43px;
+  margin-right: 6px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div > button.confirm_delete_button {
+  background-position: -387px -43px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div div {
+  background: #32333C;
+  align-items: center;
+  border-radius: 0px 4px 4px 0px;
+  border: 1px solid #606066;
+  display: flex;
+  padding: 0 8px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div div span {
+  color: #FFF;
+  font: 10px/12px "roboto-regular";
+  margin-right: 8px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div div button {
+  background-color: transparent;
+  border: none;
+  color: #6D7186;
+  cursor: pointer;
+  font: 10px/12px "roboto-regular";
+  margin-right: 8px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div div button:last-child {
+  margin-right: 0;
+}
+#wrapper #post_and_reply_container #post_list_container > li .response_container > div div button:hover {
+  color: #A2A2FF;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread {
+  margin: 27px 0 0;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li {
+  border-top: 1px solid #3F404A;
+  list-style: none;
+  padding: 24px 0 0 15px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li:first-child {
+  border-top: 0;
+  padding: 0 0 0 15px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li:last-child .response_container {
+  margin-bottom: 0;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li .post_reply_containers {
+  display: none;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li:hover .response_container .delete_button_container {
+  opacity: 1;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li .response_container {
+  margin-bottom: 5px;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li .response_container > span {
+  margin: 0 0 0;
+  width: 50%;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li .response_container > span span:first-child {
+  border: none;
+  margin: 0 0 0;
+  padding: 0 0 0;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li .response_container > span span:nth-child(2),
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li .response_container > span span:last-child {
+  display: none;
+}
+#wrapper #post_and_reply_container #post_list_container > li .reply_thread li .response_container .delete_button_container {
+  opacity: 0;
+}
+@media only screen and (max-width: 580px) {
+  #wrapper #post_and_reply_container #post_list_container li {
+    padding: 22px 20px 12px;
+  }
+  #wrapper #post_and_reply_container #post_list_container li > p {
+    font: 14px/18px "roboto-regular";
+    overflow-wrap: break-word;
+  }
+  #wrapper #post_and_reply_container #post_list_container li .response_container {
+    height: 30px;
+    position: relative;
+  }
+  #wrapper #post_and_reply_container #post_list_container li .response_container > span {
+    width: 70% !important;
+  }
+  #wrapper #post_and_reply_container #post_list_container li .response_container > span span .comment_response {
+    font: 12px/14px "roboto-regular";
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+  #wrapper #post_and_reply_container #post_list_container li .response_container > span > span {
+    display: inline-block;
+    font: 10px/12px "roboto-regular";
+  }
+  #wrapper #post_and_reply_container #post_list_container li .response_container > span > span:first-child {
+    border-right: 0;
+    display: block;
+  }
+  #wrapper #post_and_reply_container #post_list_container li .response_container > span > span:last-child {
+    display: inline-block;
+  }
+  #wrapper #post_and_reply_container #post_list_container li .response_container .delete_button_container {
+    position: absolute;
+    right: 0;
+  }
+  #wrapper #post_and_reply_container #post_list_container li .post_reply_containers {
+    margin: 11px 0 0;
+    padding-left: 0;
+  }
+  #wrapper #post_and_reply_container #post_list_container li .reply_thread li {
+    padding: 17px 0 0 15px;
+  }
+  #wrapper #post_and_reply_container #post_list_container li .reply_thread li .reply_thread {
+    display: none;
+  }
+}
+#wrapper .post_reply_containers {
+  border-radius: 10px;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  position: relative;
+}
+#wrapper .post_reply_containers.input_error {
+  border: none !important;
+}
+#wrapper .post_reply_containers.input_error textarea {
+  border: 1px solid #EB5757 !important;
+}
+#wrapper .post_reply_containers textarea {
+  background-color: #3A3C46;
+  border: none;
+  border-radius: 10px;
+  color: #FFF;
+  font: 17px/25px "roboto-regular";
+  height: 100%;
+  outline: none;
+  padding: 20px;
+  resize: none;
+  width: 100%;
+}
+#wrapper .post_reply_containers textarea:focus {
+  border: 1px solid #00A3FF;
+}
+#wrapper .post_reply_containers button {
+  background-color: #00A3FF;
+  border-radius: 8px;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  font: 14px/20px "roboto-regular";
+  height: 38px;
+  outline: none;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.21s;
+  width: 100px;
+}
+#wrapper .post_reply_containers button:hover {
+  background-color: #0050C8;
+}
+#wrapper .post_reply_containers .mobile_background {
+  display: none;
+}
+@media only screen and (max-width: 580px) {
+  #wrapper .post_reply_containers {
+    align-items: flex-end;
+    background-color: #3A3C46;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+    resize: none;
+  }
+  #wrapper .post_reply_containers .mobile_background {
+    background-color: #3A3C46;
+    border-top: 1px solid #6D7186;
+    bottom: 1px;
+    display: block;
+    height: 58px;
+    left: -10px;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 90%;
+  }
+  #wrapper .post_reply_containers button {
+    bottom: 10px;
+    top: unset;
+    transform: none;
+    z-index: 1;
+  }
+  #wrapper .post_reply_containers textarea {
+    border-bottom: 1px solid #3A3C46;
+    font: 14px/15px "roboto-regular";
+    max-height: 300px;
+    min-height: 115px;
+    padding: 14px 20px;
+  }
+  #wrapper .post_reply_containers textarea:focus ~ .mobile_background {
+    border-top: 1px solid #00A3FF;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #wrapper {
+    padding: 0 35px;
+  }
+  #wrapper #post_and_reply_container {
+    width: 100%;
+  }
+  #wrapper #post_and_reply_container #post_list_container::before {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 580px) {
+  #wrapper #post_and_reply_container {
+    margin: 30px auto;
+  }
+  #wrapper #post_and_reply_container h1 {
+    font: 20px/23px "roboto-regular";
+  }
+  #wrapper #post_and_reply_container > p {
+    font: 16px/19px "roboto-regular";
+    margin: 3px 0 15px;
+  }
+  #wrapper #post_and_reply_container > p.recent_forums {
+    margin: 27px 0 8px;
+  }
+}

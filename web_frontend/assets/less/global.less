@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "roboto-bold";
+    src: url("../fonts/Roboto-Bold.ttf")
+}
+@font-face {
+    font-display: swap;
+    font-family: "roboto-regular";
+    src: url("../fonts/Roboto-Regular.ttf")
+}
+@font-face {
+    font-display: swap;
+    font-family: "roboto-medium";
+    src: url("../fonts/Roboto-Medium.ttf")
+}
+
+@roboto_bold: "roboto-bold";
+@roboto_regular: "roboto-regular";
+@roboto_medium: "roboto-medium";
+
+@blue: #00A3FF;
+@dark_grey: #1D1F2B;
+@green: #85EB7E;
+@grey: #6D7186;
+@light_grey: #9496A1;
+@orange: #FFD34F;
+@red: #EB5757;
+@white: #FFF;
+
+.input_error{
+    border: 1px solid @red !important;
+    .mobile_background{
+        border-top: 1px solid @red !important;
+    }
+}
+
+body{
+    background-color: #2C2D34;
+    #wrapper{
+        .form_template{
+            background-color: @dark_grey;
+            border-radius: 20px;
+            display: flex;
+            height: 694px;
+            justify-content: space-between;
+            margin: 120px auto;
+            overflow: hidden;
+            width: 876px;
+            label{
+                color: #6D7186;
+                display: block;
+                font: 14px/16px @roboto_regular;
+                margin-top: 19px;
+            }
+            .columned_block{
+                display: flex;
+                justify-content: space-between;
+                label{
+                    width: 48.4%;
+                }
+            }
+            .form_inputs{
+                background: #31354F;
+                border-radius: 9px;
+                border: 1px solid transparent;
+                color: @white;
+                display: block;
+                font: 16px/16px @roboto_regular;
+                height: 60px;
+                margin-top: 8px;
+                outline: none;
+                padding: 20px;
+                width: 100%;
+                &:focus{
+                    border: 1px solid @blue;
+                }
+            }
+            .button_submit{
+                background-color: @blue;
+                border-radius: 9px;
+                border: none;
+                color: @white;
+                cursor: pointer;
+                font: 21px/25px @roboto_bold;
+                height: 60px;
+                margin-top: 30px;
+                outline: none;
+                transition: .21s;
+                width: 100%;
+                &:hover{
+                    opacity: .8;
+                }
+            }
+            p{
+                color: @grey;
+                font: 17px/21px @roboto_regular;
+                margin: 36px 0 0;
+                text-align: center;
+                a{
+                    color: @blue;
+                }
+            }
+            h1{
+                color: @white;
+                font: 21px/24px @roboto_regular;
+                margin: 0 0 46px;
+                padding-left: 75px;
+                position: relative;
+                span{
+                    color: @grey;
+                    display: block;
+                    font: 17px/21px @roboto_regular;
+                    margin-top: 3px;
+                }
+                &::before{
+                    content: "";
+                    background: url("../images/the_icon_sprite.svg");
+                    background-position: 133px -33px;
+                    height: 46px;
+                    left: 0;
+                    margin-right: 29px;
+                    position: absolute;
+                    width: 46px;
+                }
+            }
+            div{
+                &:first-child{
+                    padding: 74px 78px;
+                    width: 100%;
+                }
+                &:last-child{
+                    background-color: #3B3C43;
+                    height: 100%;
+                    min-width: 205px;
+                    overflow: hidden;
+                    padding: 75px 0 0 51px;
+                    position: relative;
+                    &::before, &::after{
+                        content: "";
+                        position: absolute;
+                    }
+                    &::before{
+                        background: url("../images/right_panel_sign_up_in.svg");
+                        background-size: contain;
+                        height: 373px;
+                        left: -40px;
+                        top: -51px;
+                        width: 277px;
+                    }
+                    &:after{
+                        background: url("../images/the_icon_sprite.svg");
+                        background-position: -180px 0;
+                        height: 110px;
+                        width: 95px;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 980px){
+            padding: 0 40px;
+            .form_template{
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 768px){
+            .form_template{
+                width: 100%;
+                div{
+                    &:first-child{
+                        padding: 35px;
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 680px){
+            .form_template{
+                width: 100%;
+                div{
+                    &:last-child{
+                        display: none;
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 540px){
+            padding: 0 28px;
+            .form_template{
+                height: 500px;
+                width: 100%;
+                &#signup_form{
+                    height: 720px;
+                }
+                div{
+                    &:first-child{
+                        padding: 35px 20px;
+                    }
+                    .columned_block{
+                        flex-direction: column;
+                        label{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

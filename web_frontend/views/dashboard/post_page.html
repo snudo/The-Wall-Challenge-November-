@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign In page for the wall">
+    <title>The Wall: Post and Reply Dashboard Page</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/the-wall.png">
+    <link rel="stylesheet" href="../../assets/css/post_page.css">
+</head>
+<body>
+    <nav>
+        <span></span>
+        <ul>
+            <li>Stan Nudo</li>
+            <li><a href="../sign_up_in/sign_in.html"><span>Logout</span></a></li>
+        </ul>
+    </nav>
+
+    <div id="wrapper">
+        <div id="post_and_reply_container">
+            <h1>Hello Jhaver,</h1>
+            <p>Welcome to V88 Forum Dashboard</p>
+            <div id="post_message_container" class="post_reply_containers">
+                <textarea name="post_textarea" class="post_reply_input" id="post_input" placeholder="Post your Topic..."></textarea>
+                <button id="post_button" type="button" class="cta_btns post_reply_button" name="submit_post">Post</button>
+                <span class="mobile_background"></span>
+            </div>
+
+            <p class="recent_forums">Recent Forums</p>
+            <ul id="post_list_container">
+                <li id="clone_post" class="comment">
+                    <div class="response_container">
+                        <span>
+                            <span>Stan Nudo (few seconds ago) </span>
+                            <span class="comment_response">0</span>
+                            <span>Responses</span>
+                        </span>
+                        <div class="delete_button_container">
+                            <button type="button" class="reply_button"></button>
+                            <button type="button" class="confirm_delete_button"></button>
+                            <div>
+                                <span>Confirm Delete?</span>
+                                <button class="delete_button_no" type="button">No</button>
+                                <button class="delete_button_yes" type="button">Yes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post_reply_containers">
+                        <textarea name="reply_message" class="post_reply_input" placeholder="Post your response..."></textarea>
+                        <button class="comment_button post_reply_button" type="button" name="submit_reply_button">Comment</button>
+                        <span class="mobile_background"></span>
+                    </div>
+                    <ul class="reply_thread"></ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../../assets/js/post_page.js"></script>
+</body>
+</html>
